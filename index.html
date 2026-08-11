@@ -266,7 +266,7 @@
   .stage-desc{font-size:var(--fs-sm);color:var(--muted);padding-top:2px;max-width:700px;}
 
   /* ---------- 04 the stakes ---------- */
-  .stakes{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:16px;}
+  .stakes{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:16px;}
   .stake{background:var(--panel);padding:38px 34px;transition:background-color .25s ease;}
   .stake:hover{background:var(--panel-2);}
   .stake .cap{font-family:'JetBrains Mono',monospace;font-size:var(--fs-mono);letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);margin-bottom:16px;}
@@ -279,6 +279,11 @@
     font-size:var(--fs-xs);font-style:italic;color:var(--teal);
   }
   .stake .note span{font-style:normal;font-size:10px;color:var(--cream);}
+  .stakes-note{
+    display:flex;align-items:center;gap:10px;margin-top:22px;
+    font-size:var(--fs-sm);font-style:italic;color:var(--teal);
+  }
+  .stakes-note span{font-style:normal;font-size:11px;color:var(--cream);}
 
   /* ---------- 05 partners ---------- */
   .partner-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:16px;}
@@ -330,7 +335,8 @@
     .hero-strip .cell{padding:26px 26px 18px;}
     .hero-strip .cell:nth-child(odd){border-left:none;padding-left:0;}
     .hero-strip .cell:nth-child(n+3){border-top:1px solid var(--line);}
-    .facts,.stakes{grid-template-columns:1fr;}
+    .facts{grid-template-columns:1fr;}
+    .stakes{grid-template-columns:repeat(2,1fr);}
     .why-grid{grid-template-columns:1fr;gap:0;}
     .why-card{margin-top:0 !important;}
     .why-card + .why-card{margin-top:34px !important;}
@@ -363,6 +369,7 @@
 
   @media(max-width:560px){
     :root{--gutter:22px;}
+    .stakes{grid-template-columns:1fr;}
     .hero-strip{grid-template-columns:1fr;}
     .hero-strip .cell{border-left:none;padding-left:0;border-top:1px solid var(--line);}
     .hero-strip .cell:first-child{border-top:none;}
@@ -435,9 +442,9 @@
         <div class="cap">Grand finale</div>
       </div>
       <div class="cell">
-        <div class="figure">TBD</div>
+        <div class="figure">&#8377;2.5L</div>
         <div class="cap">Prize pool</div>
-        <div class="note"><span aria-hidden="true">&#10022;</span> Worth the wait, we promise.</div>
+        <div class="note"><span aria-hidden="true">&#10022;</span> Winner takes &#8377;1L.</div>
       </div>
       <div class="cell partners-inline">
         <div class="cap">In partnership with</div>
@@ -593,28 +600,33 @@
     <div class="sec-top">
       <div>
         <div class="sec-head"><span class="n">04</span><span class="slash">/</span><span class="lbl">The stakes</span></div>
-        <h2 class="title">Prizes, <span class="accent">being finalized.</span></h2>
+        <h2 class="title"><span class="cream">&#8377;2.5L</span> on the table.</h2>
       </div>
-      <p class="sec-desc">The prize structure and pre-placement interview slots are being finalized with our sponsors, and will be announced here once confirmed.</p>
+      <p class="sec-desc">Cash prizes across the podium at the Grand Finale, plus a standalone purse for the pre-competition round — and pre-placement interview opportunities with our sponsors.</p>
     </div>
     <div class="stakes">
       <div class="stake">
-        <div class="cap">Prize pool</div>
-        <div class="big">TBD</div>
-        <p class="note"><span aria-hidden="true">&#10022;</span> Worth the wait, we promise.</p>
-        <p>Cash prizes for the top teams at the Grand Finale. The total is being confirmed.</p>
+        <div class="cap">Winner</div>
+        <div class="big">&#8377;1L</div>
+        <p>First place at the Grand Finale.</p>
       </div>
       <div class="stake">
-        <div class="cap">PPI slots</div>
-        <div class="big plain">With sponsors</div>
-        <p>Pre-placement interview opportunities for standout teams.</p>
+        <div class="cap">Runner-up</div>
+        <div class="big">&#8377;75K</div>
+        <p>Second place at the Grand Finale.</p>
       </div>
       <div class="stake">
-        <div class="cap">Break-up</div>
-        <div class="big plain">Announced soon</div>
-        <p>Winner, runner-up and special awards will be published here.</p>
+        <div class="cap">Second runner-up</div>
+        <div class="big">&#8377;50K</div>
+        <p>Third place at the Grand Finale.</p>
+      </div>
+      <div class="stake">
+        <div class="cap">Round 0</div>
+        <div class="big">&#8377;25K</div>
+        <p>Top entry in the Premise pre-competition round.</p>
       </div>
     </div>
+    <p class="stakes-note"><span aria-hidden="true">&#10022;</span> Pre-placement interviews with our sponsors are on the table for standout teams.</p>
   </div>
 </section>
 
